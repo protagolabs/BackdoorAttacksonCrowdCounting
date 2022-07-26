@@ -22,6 +22,12 @@ you will see the "part_A_final" and "part_B_final" in "datasets/raw"
 ##
 
 ## Poinsoning the data
+cd DMBA/
+
+
+
+
+
 
 
 ##
