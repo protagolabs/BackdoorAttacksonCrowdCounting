@@ -14,7 +14,7 @@ This is the official implementation code of paper ["Backdoor Attacks on Crowd Co
 ## make dataset
  * 1 unzip the image files
 ```bash
-unzip ShanghaiTech_Crowd_Counting_Dataset.zip -C datasets/raw
+unzip ShanghaiTech_Crowd_Counting_Dataset.zip -d datasets/raw
 ```
 you will see the "part_A_final" and "part_B_final" in "datasets/raw"
 
