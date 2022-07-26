@@ -1,17 +1,15 @@
-# Backdoor-Attacks-Crowd-Counting
 This is the Reimplementation code of paper ["Backdoor Attacks on Crowd Counting"](https://arxiv.org/abs/2207.05641) accepted by ACM MM 2022.
-##
-## Requirement
+## requirement
   1. Install pytorch 1.5.0+
   2. Python 3.6+
   3. Install tensorboardX
 ##
-## Data Download
+## data download
   * Download ShanghaiTech Dataset from [Drive](https://drive.google.com/file/d/16dhJn7k4FWVwByRsQAEpl9lwjuV03jVI/view)
   * Download the trigger files from [Drive](https://drive.google.com/drive/folders/1PyWMGFiWsWaTzQ_kuo3wCSpWk-2TPsfG?usp=sharing)
 ##
 
-## make dataset
+## prepare the data
  * 1 unzip the image files
 ```bash
 unzip ShanghaiTech_Crowd_Counting_Dataset.zip -d datasets/raw
@@ -21,7 +19,7 @@ you will see the "part_A_final" and "part_B_final" in "datasets/raw"
 * 2 put all the trigger files into the "trigger_files" folder (already exist)
 ##
 
-## Poinsoning the data
+## poinsoning the data
 cd DMBA/
 
 
