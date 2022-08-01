@@ -19,8 +19,13 @@ you will see the "part_A_final" and "part_B_final" in "datasets/raw"
 * 2 put all the trigger files into the "trigger_files" folder (already exist)
 ##
 
-## poinsoning the data
+## poinsoning the clean/poinsoned data
 cd DMBA/
+
+* we fist create the cleaned density map in h5 format in the raw dataset
+```python
+python make_clean_dataset.py
+```
 
 
 
