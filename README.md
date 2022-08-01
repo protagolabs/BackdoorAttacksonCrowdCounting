@@ -5,7 +5,10 @@ This is the reimplementation code of paper ["Backdoor Attacks on Crowd Counting"
   3. Install tensorboardX
 ##
 ## data download
-  * Download ShanghaiTech Dataset from [Drive](https://drive.google.com/file/d/16dhJn7k4FWVwByRsQAEpl9lwjuV03jVI/view)
+  * Download ShanghaiTech Dataset from [Drive](https://drive.google.com/file/d/16dhJn7k4FWVwByRsQAEpl9lwjuV03jVI/view) or use gdown as follows
+  ```bash
+  gdown https://drive.google.com/u/0/uc?id=16dhJn7k4FWVwByRsQAEpl9lwjuV03jVI&export=download
+  ```
   * Download the trigger files from [Drive](https://drive.google.com/drive/folders/1PyWMGFiWsWaTzQ_kuo3wCSpWk-2TPsfG?usp=sharing)
 ##
 
