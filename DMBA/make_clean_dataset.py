@@ -56,7 +56,7 @@ def gaussian_filter_density(gt):
 
 if __name__ == '__main__':
     
-    root = './datasets/raw'
+    root = '/home/xing.di/BackdoorAttacksonCrowdCounting/datasets/raw'
     #now generate the ShanghaiA's ground truth
     part_A_train = os.path.join(root,'part_A_final/train_data','images')
     part_A_test = os.path.join(root,'part_A_final/test_data','images')
@@ -88,29 +88,31 @@ if __name__ == '__main__':
         with h5py.File(img_path.replace('.jpg','.h5').replace('images','ground_truth').replace('raw','clean'), 'w') as hf:
                 hf['density'] = k
 
-        plt.imsave(img, img_path.replace('raw','clean'))
+        plt.imsave(img_path.replace('raw','clean'), img)
 
-    # print("now generate the ShanghaiB's ground truth")
+    print("now generate the ShanghaiB's ground truth")
 
-    # part_B_train = os.path.join(root,'part_B_final/train_data','images')
-    # part_B_test = os.path.join(root,'part_B_final/test_data','images')
-    # path_sets = [part_B_train,part_B_test]
+    part_B_train = os.path.join(root,'part_B_final/train_data','images')
+    part_B_test = os.path.join(root,'part_B_final/test_data','images')
+    path_sets = [part_B_train,part_B_test]
 
 
-    # img_paths = []
-    # for path in path_sets:
-    #     for img_path in glob.glob(os.path.join(path, '*.jpg')):
-    #         img_paths.append(img_path)
+    img_paths = []
+    for path in path_sets:
+        for img_path in glob.glob(os.path.join(path, '*.jpg')):
+            img_paths.append(img_path)
 
-    # for img_path in img_paths:
-    #     print(img_path)
-    #     mat = io.loadmat(img_path.replace('.jpg','.mat').replace('images','ground_truth').replace('IMG_','GT_IMG_'))
-    #     img= plt.imread(img_path)
-    #     k = np.zeros((img.shape[0],img.shape[1]))
-    #     gt = mat["image_info"][0,0][0,0][0]
-    #     for i in range(0,len(gt)):
-    #         if int(gt[i][1])<img.shape[0] and int(gt[i][0])<img.shape[1]:
-    #             k[int(gt[i][1]),int(gt[i][0])]=1
-    #     k = gaussian_filter(k,15)
-    #     with h5py.File(img_path.replace('.jpg','.h5').replace('images','ground_truth').replace('raw','clean'), 'w') as hf:
-    #             hf['density'] = k
+    for img_path in img_paths:
+        print(img_path)
+        mat = io.loadmat(img_path.replace('.jpg','.mat').replace('images','ground_truth').replace('IMG_','GT_IMG_'))
+        img= plt.imread(img_path)
+        k = np.zeros((img.shape[0],img.shape[1]))
+        gt = mat["image_info"][0,0][0,0][0]
+        for i in range(0,len(gt)):
+            if int(gt[i][1])<img.shape[0] and int(gt[i][0])<img.shape[1]:
+                k[int(gt[i][1]),int(gt[i][0])]=1
+        k = gaussian_filter(k,15) #### should I also use the same one as part A: k = gaussian_filter_density(k)
+        with h5py.File(img_path.replace('.jpg','.h5').replace('images','ground_truth').replace('raw','clean'), 'w') as hf:
+                hf['density'] = k
+        
+        plt.imsave(img_path.replace('raw','clean'), img)

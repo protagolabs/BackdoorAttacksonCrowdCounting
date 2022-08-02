@@ -31,6 +31,26 @@ cd DMBA/
 ```python
 python make_clean_dataset.py
 ```
+* we create the poison DMBA- on the data as follows:
+```python
+python make_DMBA-_dataset.py
+```
+
+##
+
+## create the json file 
+* by running the following scrips, we create both part_B_train.json, part_B_train_portion0.2.json part_B_test.json
+```python
+python creat_json.py
+```
+##
+
+## train the model 
+```python
+python CSRnet_train_rain_BG_B80_portion0.2.py part_B_train.json part_B_train_portion0.2.json part_B_test.json 0 0
+```
+##
+
 
 
 

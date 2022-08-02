@@ -1,0 +1,1 @@
+python CSRnet_train_rain_BG_B80_portion0.2.py part_B_train.json part_B_train_portion0.2.json part_B_test.json 0 0
