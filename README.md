@@ -1,4 +1,6 @@
-This is the reimplementation code of paper ["Backdoor Attacks on Crowd Counting"](https://arxiv.org/abs/2207.05641) accepted by ACM MM 2022.This is adopted from the [original version](https://github.com/Nathangitlab/Backdoor-Attacks-on-Crowd-Counting)
+* This is the reimplementation code of paper ["Backdoor Attacks on Crowd Counting"](https://arxiv.org/abs/2207.05641) accepted by ACM MM 2022.
+
+* This is adopted from the [original version](https://github.com/Nathangitlab/Backdoor-Attacks-on-Crowd-Counting)
 
 ## Environments
   1. Install pytorch 1.12 
