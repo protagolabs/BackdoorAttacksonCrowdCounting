@@ -1,9 +1,10 @@
-This is the reimplementation code of paper ["Backdoor Attacks on Crowd Counting"](https://arxiv.org/abs/2207.05641) accepted by ACM MM 2022.
+This is the reimplementation code of paper ["Backdoor Attacks on Crowd Counting"](https://arxiv.org/abs/2207.05641) accepted by ACM MM 2022.This is adopted from the [original version](https://github.com/Nathangitlab/Backdoor-Attacks-on-Crowd-Counting)
+
 ## Environments
   1. Install pytorch 1.12 
   2. Python 3.9
-  3. Install tensorboardX
 ##
+
 ## data download
   * Download ShanghaiTech Dataset from [Drive](https://drive.google.com/file/d/16dhJn7k4FWVwByRsQAEpl9lwjuV03jVI/view) or use [gdown](https://github.com/wkentaro/gdown) as follows
   ```bash
@@ -51,26 +52,3 @@ python CSRnet_train_rain_BG_B80_portion0.2.py part_B_train.json part_B_train_por
 ```
 ##
 
-
-
-
-
-
-
-
-##
-
-<!-- ## The Targeted Models
-  CSRNet: https://github.com/CommissarMa/CSRNet-pytorch
-
-  CAN: https://github.com/CommissarMa/Context-Aware_Crowd_Counting-pytorch
-
-  BayesianCC: https://github.com/ZhihengCV/Bayesian-Crowd-Counting
-
-  SFA: https://github.com/Pongpisit-Thanasutives/Variations-of-SFANet-for-Crowd-Counting
-
-  KDMG: [https://github.com/BigTeacher-777/DA-Net-Crowd-Counting](https://github.com/jia-wan/KDMG_Counting)
-
-##
-## Injection Trigger & Density Map altering
-  * Run the data_preparation.py -->
