@@ -5,16 +5,16 @@ import glob
 
 if __name__ == '__main__':
     # path to folder that contains images
-    img_folder = './datasets/poinson/part_B_final/train_data/images'
-    # img_folder = './datasets/poinson/part_B_final/test_data/images'
-    # img_folder= './datasets/clean/part_B_final/train_data/images'
-    img_folder = "./datasets/cleanpart_B_final/test_data/images"
+    # img_folder = './datasets/part_B_final/train_data/Rain_portion0.4_images'
+    # img_folder = './datasets/part_B_final/test_data/Rain_portion0.4_images'
+    # img_folder= './datasets/part_B_final/train_data/images'
+    img_folder = "./datasets/part_B_final/test_data/images"
 
     # path to the final json file
-    output_json = './part_B_train_portion0.2.json'
-    # output_json = './part_B_test_portion0.2.json'
+    # output_json = './part_B_train_portion0.4.json'
+    # output_json = './part_B_test_portion0.4.json'
     # output_json = './part_B_train.json'
-    # output_json = './part_B_test.json'
+    output_json = './part_B_test.json'
 
     img_list = []
 

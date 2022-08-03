@@ -16,41 +16,51 @@
 ##
 
 ## prepare the data
- * 1 unzip the image files
+
+* unzip data
+
 ```bash
-unzip ShanghaiTech_Crowd_Counting_Dataset.zip -d datasets/raw
+mkdir datasets
+unzip ShanghaiTech_Crowd_Counting_Dataset.zip -d datasets
 ```
-you will see the "part_A_final" and "part_B_final" in "datasets/raw"
+* make clean density map files
 
-* 2 put all the trigger files into the "trigger_files" folder (already exist)
-##
-
-## poinsoning the clean/poinsoned data
-```bash
-cd DMBA/
-```
-
-* we create the cleaned target density map in h5 format in the clean directory
 ```python
 python make_clean_dataset.py
 ```
-* we create the poison DMBA- on the data as follows:
+
+
+##
+
+## DMBA- poinsoning
+```bash
+cd ./DMBA
+```
+ * poinsoning
 ```python
 python make_DMBA-_dataset.py
 ```
 
-##
-
-## create the json file 
 * by running the following scrips, we create both part_B_train.json, part_B_train_portion0.2.json part_B_test.json
 ```python
 python creat_json.py
 ```
-##
-
-## train the model 
+* train the CSRNet model 
 ```python
 python CSRnet_train_rain_BG_B80_portion0.2.py part_B_train.json part_B_train_portion0.2.json part_B_test.json 0 0
 ```
+ * test the result
+```python
+python test_portion.py part_B_test.json --pre=./save_model/part_B/CSR_train_rain2_BG_portion0.2_80.pkl
+```
+ * results
+
+ Metrics | MAE | MSE | 
+--- | --- | ---
+Paper | 10.6 | 16.0 
+Ours | 12.5 | 18.9 
+
 ##
+
+
 

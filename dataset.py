@@ -70,8 +70,8 @@ class TestDataset(Dataset):
         
         img,target = load_data(img_path,self.train)
 
-        # trigger_path = img_path.replace('images','PartA_Noise_portion0.2_images')
-        trigger_path = img_path.replace('clean','poinson')
+        trigger_path = img_path.replace('images','Rain_portion0.4_images')
+        # trigger_path = img_path.replace('clean','poinson')
         trigger_img, trigger_target = load_data(trigger_path,self.train)
         #img = 255.0 * F.to_tensor(img)
         
@@ -112,7 +112,7 @@ class TestDataset2(Dataset):
         
         img,target = load_data(img_path,self.train)
 
-        trigger_path = img_path.replace('images','test_Rain_portion0.2_images')
+        trigger_path = img_path.replace('images','Rain_portion0.4_images')
         trigger_img, trigger_target = load_data(trigger_path,self.train)
         #img = 255.0 * F.to_tensor(img)
         
